@@ -1,0 +1,49 @@
+<table id="tableTotalOrder" class="table table-transparent table-responsive">
+    <thead class="d-none">
+        <tr>
+            <th>{{ __('Sản phẩm') }}</th>
+            <th class="text-center" style="width: 15%">{{ __('Số lượng') }}</th>
+            <th class="text-end" style="width: 1%">{{ __('Đơn giá') }}</th>
+            <th class="text-end" style="width: 1%">{{ __('Tổng tiền') }}</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{--<tr>
+            <td colspan="4" class="strong text-end">{{ __('Tạm tính') }}</td>
+            <td class="text-end">{{ format_price($sub_total ?? 0) }}</td>
+        </tr>--}}
+
+        @if ((isset($user) && $user == App\Enums\User\UserRoles::Agent))
+        <tr>
+            <td colspan="4" class="strong text-end">{{ __('Giảm giá') }}</td>
+            <td class="text-end">{{ format_price($discount ?? 0) }}</td>
+        </tr>
+        @else
+        <tr>
+            <td colspan="4" class="strong text-end">{{ __('Giảm giá') }}</td>
+            <td class="text-end">{{ format_price(0) }}</td>
+        </tr>
+        @endif
+        @if (isset($user) && $user == App\Enums\User\UserRoles::Agent)
+        @if($order->status == App\Enums\Order\OrderStatus::Completed)
+        <tr>
+            <td colspan="4" class="strong text-end">{{ __('Thưởng') }}</td>
+            <td class="text-end">{{ format_price($reward ?? 0) }}</td>
+        </tr>
+        @else
+        <tr>
+            <td colspan="4" class="strong text-end">{{ __('Thưởng') }}</td>
+            <td class="text-end">0đ</td>
+        </tr>
+        @endif
+        @endif
+        <tr>
+            <td colspan="4" class="strong text-end">{{ __('Giao hàng') }}</td>
+            <td class="text-end">{{ format_price(0) }}</td>
+        </tr>
+        <tr>
+            <td colspan="4" class="font-weight-bold text-uppercase text-end">{{ __('Tổng cộng') }}</td>
+            <td class="text-end">{{ format_price($total) }}</td>
+        </tr>
+    </tbody>
+</table>
