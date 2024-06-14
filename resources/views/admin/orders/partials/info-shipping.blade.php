@@ -22,5 +22,5 @@
 </div>
 <div class="mb-3">
     <label for="">{{ __('Địa chỉ') }}:</label>
-    <x-input name="order[shipping_address]" :value="old('order.shipping_address', $shipping_address ?? '')" :placeholder="__('Địa chỉ')" :required="true" disabled style="background-color: transparent;"/>
+    <x-input name="order[shipping_address]" :value="old('order.shipping_address', $shipping_address ?? '')" :placeholder="__('Địa chỉ')" :required="false" disabled style="background-color: transparent;"/>
 </div>

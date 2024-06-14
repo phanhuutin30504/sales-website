@@ -34,6 +34,6 @@
         background-color: {{ $settings['bg_color_footer'] }};
     }
     </style> --}}
- 
+
     @stack('custom-css')
 </head>

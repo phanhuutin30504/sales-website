@@ -20,7 +20,7 @@ class SettingSeeder extends Seeder
         DB::table('settings')->truncate();
         DB::table('settings')->insert([
             [
-                'setting_key' => 'site_name',
+                'setting_key' => 'Nước',
                 'setting_name' => 'Tên site',
                 'plain_value' => 'Site name',
                 'type_input' => SettingTypeInput::Text,
@@ -30,7 +30,7 @@ class SettingSeeder extends Seeder
             [
                 'setting_key' => 'site_logo',
                 'setting_name' => 'Logo',
-                'plain_value' => '/public/assets/images/logo.png',
+                'plain_value' => '/public/assets/images/logo-nuoc-uong.jpg',
                 'type_input' => SettingTypeInput::Image,
                 'group' => SettingGroup::General,
                 'desc' => 'Logo thương hiệu'
@@ -38,7 +38,7 @@ class SettingSeeder extends Seeder
             [
                 'setting_key' => 'site_favicon',
                 'setting_name' => 'Favicon',
-                'plain_value' => '/public/assets/images/logo.png',
+                'plain_value' => '/public/assets/images/logo-nuoc-uong.jpg',
                 'type_input' => SettingTypeInput::Image,
                 'group' => SettingGroup::General,
                 'desc' => 'Favicon'

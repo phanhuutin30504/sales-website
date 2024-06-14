@@ -31,12 +31,12 @@ return [
         UserGender::Other->value => 'Khác',
     ],
     ProductUnit::class => [
-        ProductUnit::Pail->value => 'Giày',
-        ProductUnit::Bottle->value => 'Phụ kiện'
+        ProductUnit::Pail->value => 'Thùng',
+        ProductUnit::Bottle->value => 'Chai'
     ],
     ProductUnit::class => [
-        ProductUnit::Pail->value => 'Giày',
-        ProductUnit::Bottle->value => 'Phụ kiện'
+        ProductUnit::Pail->value => 'Thùng',
+        ProductUnit::Bottle->value => 'Chai'
     ],
     ProductCategoryStatus::class => [
         ProductCategoryStatus::Published->value => 'Đã xuất bản',

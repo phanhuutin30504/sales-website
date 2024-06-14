@@ -54,7 +54,7 @@
         <hr>
         <div class="d-flex container">
             <div class="col-12 text-center">
-                <p>Copyright © 2024 <strong>Lafresh</strong>. Powered by Mevivu</p>
+                <p>Copyright © 2024 </p>
             </div>
         </div>
     </div>
