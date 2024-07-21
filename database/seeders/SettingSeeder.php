@@ -46,7 +46,7 @@ class SettingSeeder extends Seeder
             [
                 'setting_key' => 'email',
                 'setting_name' => 'Email',
-                'plain_value' => 'mevivu@gmail.com',
+                'plain_value' => 'phanhuutin3052004@gmail.com',
                 'type_input' => SettingTypeInput::Email,
                 'group' => SettingGroup::General,
                 'desc' => 'Email liên hệ'
